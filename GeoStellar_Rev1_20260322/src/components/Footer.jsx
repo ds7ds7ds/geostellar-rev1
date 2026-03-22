@@ -7,7 +7,6 @@ const Footer = () => {
     <footer className="bg-slate-950 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand */}
           <div className="md:col-span-2">
             <Link to="/" className="flex items-center space-x-2 mb-4 group">
               <BorePyramid
@@ -25,12 +24,11 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-slate-400 text-sm max-w-md leading-relaxed">
-              Precision geothermal engineering with Oil & Gas industry standards. 
+              Precision geothermal engineering with Oil & Gas industry standards.
               Delivering technical excellence to contractors and engineering firms across the Northeast.
             </p>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h4 className="text-sm font-semibold text-white mb-4 tracking-wide">NAVIGATION</h4>
             <ul className="space-y-2">
@@ -41,7 +39,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
             <h4 className="text-sm font-semibold text-white mb-4 tracking-wide">CONTACT</h4>
             <ul className="space-y-3">
@@ -73,7 +70,7 @@ const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center">
           <p className="text-slate-500 text-xs">
-            © {new Date().getFullYear()} GeoStellar. All rights reserved.
+            Copyright {new Date().getFullYear()} GeoStellar. All rights reserved.
           </p>
           <p className="text-slate-500 text-xs mt-2 md:mt-0">
             Precision Engineering. Sustainable Future.

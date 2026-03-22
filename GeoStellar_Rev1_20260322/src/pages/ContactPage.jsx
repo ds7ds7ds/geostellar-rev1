@@ -38,28 +38,26 @@ const ContactPage = () => {
           phone: formData.phone,
           projectType: formData.projectType,
           message: formData.message,
-          _subject: `GeoStellar Contact: ${formData.projectType || 'General'} — ${formData.name}`
+          _subject: `GeoStellar Contact: ${formData.projectType || 'General'} - ${formData.name}`
         })
       })
 
       if (response.ok) {
         setSubmitted(true)
       } else {
-        // Fallback: open mailto link
         const subject = encodeURIComponent(`GeoStellar Inquiry: ${formData.projectType || 'General'}`)
         const body = encodeURIComponent(
           `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nPhone: ${formData.phone}\nProject Type: ${formData.projectType}\n\nMessage:\n${formData.message}`
         )
-        window.location.href = `mailto:info@geo-pioneer.com?subject=${subject}&body=${body}`
+        window.location.href = `mailto:info@geostellar.com?subject=${subject}&body=${body}`
         setSubmitted(true)
       }
     } catch {
-      // Fallback: open mailto link
       const subject = encodeURIComponent(`GeoStellar Inquiry: ${formData.projectType || 'General'}`)
       const body = encodeURIComponent(
         `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nPhone: ${formData.phone}\nProject Type: ${formData.projectType}\n\nMessage:\n${formData.message}`
       )
-      window.location.href = `mailto:info@geo-pioneer.com?subject=${subject}&body=${body}`
+      window.location.href = `mailto:info@geostellar.com?subject=${subject}&body=${body}`
       setSubmitted(true)
     } finally {
       setSubmitting(false)
@@ -75,10 +73,8 @@ const ContactPage = () => {
 
   return (
     <div className="pt-16">
-      {/* Hero Section */}
       <section className="relative py-24 bg-slate-900 grid-pattern overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-transparent to-slate-900" />
-        {/* Decorative pyramid watermark */}
         <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-[0.04] pointer-events-none hidden lg:block">
           <BorePyramid size={400} topColor="#fff" lineColor="#fff" dotColor="#fff" lineOpacity={1} dotOpacity={1} topOpacity={1} />
         </div>
@@ -91,22 +87,19 @@ const ContactPage = () => {
               <span className="gradient-text font-semibold">Your Project</span>
             </h1>
             <p className="text-xl text-slate-400 leading-relaxed">
-              Whether you need engineering support for a single project or ongoing technical partnership, 
+              Whether you need engineering support for a single project or ongoing technical partnership,
               we're here to help.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Contact Content */}
       <section className="py-24 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            
-            {/* Contact Info */}
             <div className="lg:col-span-1">
               <h3 className="text-xl font-medium text-white mb-8">Get in Touch</h3>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-sky-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
@@ -159,14 +152,13 @@ const ContactPage = () => {
                 </div>
               </div>
 
-              {/* Service Area */}
               <div className="mt-12 p-6 bg-slate-900/50 border border-slate-800 rounded-lg">
                 <h4 className="text-sm font-semibold text-sky-400 tracking-widest mb-4">SERVICE AREA</h4>
                 <p className="text-slate-400 text-sm mb-4">
                   Serving contractors and engineering firms throughout the Northeast:
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {["MA", "NH", "RI", "CT", "ME", "VT", "NY", "NJ"].map((state) => (
+                  {['MA', 'NH', 'RI', 'CT', 'ME', 'VT', 'NY', 'NJ'].map((state) => (
                     <span key={state} className="px-2 py-1 bg-slate-800 text-slate-400 text-xs rounded">
                       {state}
                     </span>
@@ -175,7 +167,6 @@ const ContactPage = () => {
               </div>
             </div>
 
-            {/* Contact Form */}
             <div className="lg:col-span-2">
               <div className="bg-slate-900/50 border border-slate-800 rounded-lg p-8">
                 {submitted ? (

@@ -141,11 +141,11 @@ const BlogPage = () => {
       if (response.ok) {
         setNewsletterSubmitted(true)
       } else {
-        window.location.href = `mailto:info@geo-pioneer.com?subject=${encodeURIComponent('Newsletter Subscription')}&body=${encodeURIComponent(`Please add me to the GeoStellar newsletter: ${newsletterEmail}`)}`
+        window.location.href = `mailto:info@geostellar.com?subject=${encodeURIComponent('Newsletter Subscription')}&body=${encodeURIComponent(`Please add me to the GeoStellar newsletter: ${newsletterEmail}`)}`
         setNewsletterSubmitted(true)
       }
     } catch {
-      window.location.href = `mailto:info@geo-pioneer.com?subject=${encodeURIComponent('Newsletter Subscription')}&body=${encodeURIComponent(`Please add me to the GeoStellar newsletter: ${newsletterEmail}`)}`
+      window.location.href = `mailto:info@geostellar.com?subject=${encodeURIComponent('Newsletter Subscription')}&body=${encodeURIComponent(`Please add me to the GeoStellar newsletter: ${newsletterEmail}`)}`
       setNewsletterSubmitted(true)
     } finally {
       setNewsletterSubmitting(false)
